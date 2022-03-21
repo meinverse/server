@@ -22,4 +22,13 @@ done
 echo Minecraft version: $mc_version
 echo Paper build: $build
 echo
-java -Xms3G -Xmx3G -jar $server_file --nogui
+
+# Default memory allocation
+MEMORY=4G
+
+# Load .env file to get custom memory allocation
+if [ -f .env ]; then
+    export $(cat .env | grep -v '#' | sed 's/\r$//' | awk '/=/ {print $1}')
+fi
+
+java -Xms$MEMORY -Xmx$MEMORY -jar $server_file --nogui
