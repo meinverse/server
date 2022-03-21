@@ -1,0 +1,15 @@
+# Ignore all files
+*
+
+# Apart from these
+!.gitignore
+
+# Updating the server
+!updateServer.js
+!package.json
+!yarn.lock
+!.eslintrc
+
+# Running the server
+!eula.txt
+!run.sh
