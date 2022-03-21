@@ -3,6 +3,7 @@
 
 # Apart from these
 !.gitignore
+!.env.dist
 
 # Updating the server
 !updateServer.js
